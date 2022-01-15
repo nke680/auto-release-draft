@@ -2,7 +2,7 @@ name: 'test'
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   # build: # make sure build/ci work properly
