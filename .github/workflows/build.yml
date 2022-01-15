@@ -9,7 +9,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows_latest, ubuntu-latest]
+        os: [windows_latest, ibuntu-latest]
     steps:
       - name: Get the sources
         uses: actions/checkout@v2

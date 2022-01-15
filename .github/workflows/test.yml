@@ -20,11 +20,15 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows_latest, ubuntu-latest]
+        os: [windows_latest, ubuntu-latest]      
     steps:
       - name: Get the sources
         uses: actions/checkout@v2
       - name: create a release
         uses: ./
+        with:
+          milliseconds: 1000
       - name: Print the url of the release
         run: echo ${{ steps.create-release-draft.outputs.release-url }}
+        with:
+          milliseconds: 1000
