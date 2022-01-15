@@ -1,0 +1,5 @@
+{
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///Volumes/Data/Projects/auto-release-draft/.github/workflows/build.yml"
+  }
+}
