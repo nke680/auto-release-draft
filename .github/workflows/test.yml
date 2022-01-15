@@ -23,7 +23,7 @@ jobs:
         os: [windows_latest, ubuntu-latest]
     steps:
       - name: Get the sources
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: create a release
         uses: ./
       - name: Print the url of the release
