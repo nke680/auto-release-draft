@@ -1,6 +1,6 @@
-import * as core from '@actions/core'
-import * as github from '@actions/github'
 import * as version from './version'
+const github = require('@actions/github')
+const core = require('@actions/core')
 import * as markdown from './markdown'
 
 export async function createReleaseDraft(
@@ -8,7 +8,7 @@ export async function createReleaseDraft(
   repoToken: string,
   changeLog: string
 ): Promise<string> {
-  const octokit = new github.GitHub(repoToken)
+  const octokit = new github.getInput(repoToken)
 
   const response = await octokit.repos.createRelease({
     owner: github.context.repo.owner,

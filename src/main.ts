@@ -18,7 +18,7 @@ export async function run(): Promise<void> {
 
     core.setOutput('release-url', releaseUrl)
   } catch (error) {
-    core.setFailed(error.message)
+    core.setFailed(`{error.message}`)
   }
 }
 
